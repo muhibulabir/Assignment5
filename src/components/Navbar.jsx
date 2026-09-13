@@ -9,11 +9,11 @@ function Navbar() {
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-md p-2 text-ink md:hidden"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
+          aria-label={menuopen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuopen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          {menuOpen ? (
+          {menuopen ? (
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
@@ -27,7 +27,7 @@ function Navbar() {
           <img src={logo} alt="Dev Stack" className="h-8 w-auto" />
         </a>
         <ul className="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-slate-600 md:flex">
-          {NAV_LINKS.map((link, i) => (
+          {NavLinks.map((link, i) => (
             <li key={link}>
               <a
                 href={`#${link.toLowerCase()}`}
@@ -38,8 +38,6 @@ function Navbar() {
             </li>
           ))}
         </ul>
-
-        {/* Right: auth actions (shown on both, compact on mobile) */}
         <div className="flex items-center gap-3 md:gap-4">
           <a href="#signin" className="hidden text-sm font-medium text-ink sm:inline">
             Sign In
@@ -52,9 +50,9 @@ function Navbar() {
           </a>
         </div>
       </nav>
-      {menuOpen && (
+      {menuopen&& (
         <ul className="flex flex-col gap-1 border-t border-slate-100 bg-white px-4 pb-4 pt-2 text-sm font-medium text-slate-600 md:hidden">
-          {NAV_LINKS.map((link, i) => (
+          {NavLinks.map((link, i) => (
             <li key={link}>
               <a
                 href={`#${link.toLowerCase()}`}
