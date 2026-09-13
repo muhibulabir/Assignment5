@@ -1,0 +1,21 @@
+@import './styles/categoryStyles.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-white text-ink antialiased;
+}
+.text-gradient-brand {
+  @apply bg-brand-gradient bg-clip-text text-transparent;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+

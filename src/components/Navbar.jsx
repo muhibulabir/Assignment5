@@ -6,7 +6,6 @@ function Navbar() {
     return (
         <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
            <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        {/* Mobile: hamburger on the left */}
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-md p-2 text-ink md:hidden"
@@ -24,13 +23,9 @@ function Navbar() {
             </svg>
           )}
         </button>
-
-        {/* Brand logo — centered on mobile, left on desktop */}
         <a href="#top" className="flex items-center gap-2 md:mr-6">
           <img src={logo} alt="Dev Stack" className="h-8 w-auto" />
         </a>
-
-        {/* Desktop nav links — centered */}
         <ul className="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-slate-600 md:flex">
           {NAV_LINKS.map((link, i) => (
             <li key={link}>
@@ -65,7 +60,7 @@ function Navbar() {
                 href={`#${link.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
                 className={`block rounded-md px-2 py-2 ${
-                  i === 0 ? 'text-brand-pink' : 'hover:bg-slate-50 hover:text-ink'
+                  i===0 ? 'text-brand-pink' : 'hover:bg-slate-50 hover:text-ink'
                 }`}
               >
                 {link}
