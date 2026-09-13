@@ -3,7 +3,11 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import Navbar from './components/Navbar'
-
+import Hero from './components/Hero'
+import Loader from './components/Loader'
+import TechGrid from './components/TechGrid'
+import StackPanel from './components/StackPanel'
+import Footer from './components/Footer'
 
 export default function App() {
   const [technologies, setTechnologies] = useState([])
