@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Loader from './components/Loader'
+import Loader from './components/loader'
 import TechGrid from './components/TechGrid'
 import StackPanel from './components/StackPanel'
 import Footer from './components/Footer'
